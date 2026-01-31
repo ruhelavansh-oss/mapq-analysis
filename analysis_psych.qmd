@@ -18,7 +18,7 @@ execute:
 
 # Introduction
 
-This section details the psychometric evaluation of the **Modified Attitudes on Psychedelics Questionnaire (MAPQ)**. We employ classical test theory (CTT) and latent variable modeling to assess the instrument's reliability and construct validity.
+This section details the psychometric evaluation of the **Modified Attitudes on Psychedelics Questionnaire (MAPQ)**. Classical test theory (CTT) and latent variable modeling are employed to assess the instrument's reliability and construct validity.
 
 # Setup and Data Loading
 
@@ -53,9 +53,7 @@ dim_desc <- dim(my.data)
 print(paste("Dataset Dimensions:", dim_desc[1], "Observations,", dim_desc[2], "Items"))
 ```
 
-# Item Analysis
-
-We inspect descriptive statistics to ensure data quality.
+# Moment Metrics
 
 ```{r descriptives}
 #| label: descriptives
@@ -63,9 +61,9 @@ We inspect descriptive statistics to ensure data quality.
 describe(my.data)
 ```
 
-# Reliability Analysis
+# Reliability Test
 
-We assess internal consistency using **Cronbach's Alpha** and **McDonald's Omega**.
+Internal consistency is assessed using **Cronbach's Alpha** and **McDonald's Omega**.
 
 ```{r reliability}
 #| label: reliability
@@ -114,7 +112,7 @@ pairs.panels(my.scores,
 
 # Monte Carlo Simulation
 
-To validate the robustness of the factor structure, we perform a **Monte Carlo Simulation** using `mvrnorm`. We simulate a dataset ($N=500$) preserving the original means and covariance structure, but rounded to the discrete Likert scale (1-5).
+To validate the robustness of the factor structure, a **Monte Carlo Simulation** is performed using `mvrnorm`. A dataset is simulated ($N=500$) preserving the original means and covariance structure, but rounded to the discrete Likert scale (1-5).
 
 ```{r simulation}
 #| label: monte-carlo-sim
@@ -148,11 +146,13 @@ summary(sim1)
 data2 <- sim1
 ```
 
-# Factor Analysis on Simulated Data
+# Factor Analysis
 
-We replicate the EFA and CFA on the simulated dataset to confirm structural stability.
+The EFA and CFA are replicated on the simulated dataset to confirm structural stability.
 
-## Exploratory Factor Analysis (EFA)
+## EFA
+
+Exploratory Factor Analysis is performed.
 
 ```{r sim-efa}
 #| label: sim-efa-plot
@@ -166,9 +166,9 @@ print(efa_result)
 fa.diagram(efa_result)
 ```
 
-## Confirmatory Factor Analysis (CFA)
+## CFA
 
-We define the theoretical model where each latent construct (LC) loads onto its respective items.
+Confirmatory Factor Analysis defines the theoretical model where each latent construct (LC) loads onto its respective items.
 
 ```{r sim-cfa}
 #| label: sim-cfa-model
