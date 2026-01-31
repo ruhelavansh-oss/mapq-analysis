@@ -1,28 +1,17 @@
-/* Scientific Typography */
+/* Remove explicit font-family to let Cosmo/Darkly themes control typography */
 body {
-    font-family: 'Georgia', serif;
     line-height: 1.6;
-    /* color: #333; Removed to support dark mode */
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Arial', sans-serif;
     font-weight: bold;
-    /* color: #2c3e50; Removed to support dark mode */
 }
 
 code {
-    font-family: 'Consolas', 'Monaco', monospace;
     font-size: 0.9em;
-    /* background-color: #f4f4f4; Removed to support dark mode */
     padding: 2px 4px;
     border-radius: 4px;
 }
-
-/* Optional: Add light-mode specific overrides if strictly needed
-   using :root[data-bs-theme="light"] { ... } 
-   but standard themes usually handle this well. 
-*/
 
 .scientific-table {
     width: 100%;
@@ -30,13 +19,13 @@ code {
     margin: 20px 0;
 }
 
-/* Ensure tables adapt to dark mode */
+/* Ensure tables adapt to dark mode using Bootstrap variables */
 .scientific-table th, .scientific-table td {
-    border: 1px solid var(--bs-border-color); /* Use Bootstrap variable */
+    border: 1px solid var(--bs-border-color);
     padding: 8px;
     text-align: left;
 }
 
 .scientific-table th {
-    background-color: var(--bs-tertiary-bg); /* Use Bootstrap variable */
+    background-color: var(--bs-tertiary-bg);
 }
