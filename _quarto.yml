@@ -40,10 +40,10 @@ website:
             text: "About"
       - section: "Code"
         contents:
-          - href: analysis_psych.qmd
-            text: "Psychological Metrics"
-          - href: analysis_dml.qmd
-            text: "Causal Machine Learning"
+          - text: "PSY"
+            href: analysis_psych.qmd
+          - text: "DML"
+            href: analysis_dml.qmd
 
   navbar:
     left:
