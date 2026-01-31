@@ -10,7 +10,7 @@ format:
 # Author Information
 
 **Vansh Singh Ruhela**  
-*Social Scientist*
+*Systems Developer & Social Scientist*
 
 -   **ORCID**: [0009-0004-1750-3592](https://orcid.org/0009-0004-1750-3592)
 -   **GitHub**: [ruhelavansh-oss](https://github.com/ruhelavansh-oss)
