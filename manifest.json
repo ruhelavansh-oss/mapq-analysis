@@ -4290,13 +4290,25 @@
   },
   "files": {
     "_quarto.yml": {
-      "checksum": "8255259557d0987d7a841ad202ed8fa1"
+      "checksum": "1e679093d9d589ba1e9ea06c0b5edc3b"
+    },
+    "_site/analysis_dml_files/figure-html/dml-fit-plot-1.png": {
+      "checksum": "f78eb44d112f566c3b9069a1e0f69fba"
+    },
+    "_site/analysis_dml.html": {
+      "checksum": "0d91ae3d1c8c4dbbe2e61f59ddaaf9eb"
+    },
+    "_site/index.html": {
+      "checksum": "7f4db7c7acc79f899a729e7c3fd5ea75"
     },
     "_site/R_libs/quarto/doc/advanced-vignettes.html": {
-      "checksum": "db0a866ff9f82a18067c92aeabe8a309"
+      "checksum": "7d788932aab0e2d59132c66f64e4e4a9"
     },
     "_site/R_libs/quarto/doc/dynamic-metadata.html": {
-      "checksum": "06e57a9b08eabe8e4871b548ce514a9c"
+      "checksum": "97a13dc58fcb2f7c170e4b59ff2808d8"
+    },
+    "_site/search.json": {
+      "checksum": "c550f4fdd7e500e38d1ed32450ba0879"
     },
     "_site/site_libs/bootstrap/bootstrap-4c6940bfffdaf28543fbece7205d6e15.min.css": {
       "checksum": "4c6940bfffdaf28543fbece7205d6e15"
@@ -4315,6 +4327,12 @@
     },
     "_site/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
+    },
+    "_site/site_libs/kePrint-0.0.1/kePrint.js": {
+      "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
+    },
+    "_site/site_libs/lightable-0.0.1/lightable.css": {
+      "checksum": "25547ce4d44910ea8f377212d34397fa"
     },
     "_site/site_libs/quarto-html/anchor.min.js": {
       "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
@@ -4361,6 +4379,9 @@
     "_site/site_libs/quarto-search/quarto-search.js": {
       "checksum": "bb16b7e73be13eba97c99d25b2a476b3"
     },
+    "_site/styles.css": {
+      "checksum": "20b02c1a3ee61f90b26cab5752c9ad10"
+    },
     ".env": {
       "checksum": "38f4c7558b97a5cc36f931d172b1fcd3"
     },
@@ -4368,13 +4389,13 @@
       "checksum": "26ea8434e3b45d72ede4ce5791eb0fea"
     },
     "about.qmd": {
-      "checksum": "f501ad35a3957083bd22caeeeb6ba559"
+      "checksum": "d2a744151b57fb9abba2797755e0fd96"
     },
     "analysis_dml.qmd": {
-      "checksum": "d3d7c420d602b985dd8612bf79a4ae76"
+      "checksum": "755f905cfc45eb27c02e4873b1c6129c"
     },
     "analysis_psych.qmd": {
-      "checksum": "881f5ee9899c0325893405fac3136c7e"
+      "checksum": "c41a4882666bb277343b35843f3f5c2a"
     },
     "data/MAPQ_TKARONTO-3.xlsx": {
       "checksum": "5200997fe1f9d79bf04990cc8a46576b"
@@ -4386,10 +4407,13 @@
       "checksum": "8d77012d7bd30b35338db43856b2e533"
     },
     "index.qmd": {
-      "checksum": "af01206d8233df575cca20692fa4f5e8"
+      "checksum": "e30c60c564af694420926ba54abc20ff"
     },
     "install_deps.R": {
       "checksum": "e8b56678d62967a9b2a5894f9b04f258"
+    },
+    "LICENSE": {
+      "checksum": "2a06e94ee3b2b35e33c9cff249d46643"
     },
     "R_libs/data.table/cc": {
       "checksum": "d6ff49d30cca806bf170af6ffaf38373"
@@ -6518,6 +6542,87 @@
     "R_libs/nanonext/R/nanonext.rdx": {
       "checksum": "909a385171c7a5da6b8e2c26fa30d59a"
     },
+    "R_libs/oysteR/DESCRIPTION": {
+      "checksum": "f6dd7c5d5b6e31f3f9963edf281b8fe6"
+    },
+    "R_libs/oysteR/doc/index.html": {
+      "checksum": "8a7f60579c7e946c630e86a34c1dedab"
+    },
+    "R_libs/oysteR/doc/reporting-security-vulnerabilities.html": {
+      "checksum": "5e9ef6627b5df02ee16d68b95008bfbc"
+    },
+    "R_libs/oysteR/doc/reporting-security-vulnerabilities.Rmd": {
+      "checksum": "507aa27a3463de236014e658b17a810c"
+    },
+    "R_libs/oysteR/help/aliases.rds": {
+      "checksum": "477a77fb30ec4a0d82c362e7a55fb51d"
+    },
+    "R_libs/oysteR/help/AnIndex": {
+      "checksum": "7e5697bdd721e90b16614e7b2249d21b"
+    },
+    "R_libs/oysteR/help/figures/logo.png": {
+      "checksum": "e3626c81f137590fbe25f6205b4f5639"
+    },
+    "R_libs/oysteR/help/oysteR.rdb": {
+      "checksum": "ce6979c6a8dce2025b015cb442f99662"
+    },
+    "R_libs/oysteR/help/oysteR.rdx": {
+      "checksum": "41d6b889d956339d8ac979b98cad729e"
+    },
+    "R_libs/oysteR/help/paths.rds": {
+      "checksum": "9db676afb247aa54c94743e0b6e5dbec"
+    },
+    "R_libs/oysteR/html/00Index.html": {
+      "checksum": "7093c79e8e4fb29a09599ce3e653c42f"
+    },
+    "R_libs/oysteR/html/R.css": {
+      "checksum": "8b9362669af13540a86a3ac6cf22f99d"
+    },
+    "R_libs/oysteR/INDEX": {
+      "checksum": "90d82b587b98fc231f1dcbfe0c0e91cd"
+    },
+    "R_libs/oysteR/LICENSE": {
+      "checksum": "86d3f3a95c324c9479bd8986968f4327"
+    },
+    "R_libs/oysteR/Meta/features.rds": {
+      "checksum": "b9fcde1f86ac1657344ebc9dd7bb52af"
+    },
+    "R_libs/oysteR/Meta/hsearch.rds": {
+      "checksum": "3cddcd98ede4db68e7b64c484268c74e"
+    },
+    "R_libs/oysteR/Meta/links.rds": {
+      "checksum": "ac7778f44c0337381970f8c5b1707025"
+    },
+    "R_libs/oysteR/Meta/nsInfo.rds": {
+      "checksum": "31cdc427b984d1a95332026dcc7b17d3"
+    },
+    "R_libs/oysteR/Meta/package.rds": {
+      "checksum": "a807697e4b75249fcc88658036529e1d"
+    },
+    "R_libs/oysteR/Meta/Rd.rds": {
+      "checksum": "35b6097ae999d346dbd5d9234984c055"
+    },
+    "R_libs/oysteR/Meta/vignette.rds": {
+      "checksum": "38b4f0a2c3ffeca6a21dda3b2ef91d17"
+    },
+    "R_libs/oysteR/NAMESPACE": {
+      "checksum": "76951895f301bfadc36a4d32c833ec19"
+    },
+    "R_libs/oysteR/NEWS.md": {
+      "checksum": "778ed81efa7521f13c1373dcb06d483c"
+    },
+    "R_libs/oysteR/R/oysteR": {
+      "checksum": "d6c68f1fe41ced6e98a766a3757313da"
+    },
+    "R_libs/oysteR/R/oysteR.rdb": {
+      "checksum": "4a31baafbf3ce52ea24c12e99498f580"
+    },
+    "R_libs/oysteR/R/oysteR.rdx": {
+      "checksum": "272d9f13bf9ee92bbc0945686b67ef41"
+    },
+    "R_libs/oysteR/RELEASING.md": {
+      "checksum": "2d29f518613f62923748a5470893c4ef"
+    },
     "R_libs/PKI/certs/demo.crt": {
       "checksum": "d6726b662beb173c9a850007dd80b167"
     },
@@ -6831,7 +6936,7 @@
       "checksum": "19ad5f4d657518541f111e6fecf7e9b9"
     },
     "R_libs/quarto/doc/hello-pdf.log": {
-      "checksum": "d1008105efa77d7157580ea434497db7"
+      "checksum": "483ac221cd9d54f7e65f266b8823c289"
     },
     "R_libs/quarto/doc/hello-pdf.qmd": {
       "checksum": "8435e015ab8e9e5eae0d97b48ee03d7b"
@@ -7307,8 +7412,11 @@
     "R_libs/snowflakeauth/R/snowflakeauth.rdx": {
       "checksum": "5f607bd6b771ea06b2a7b36b5a07570b"
     },
+    "README.md": {
+      "checksum": "874d9fced8f418a152f4448db688be86"
+    },
     "styles.css": {
-      "checksum": "78b3d28d7097f771af7b137e0756a7a9"
+      "checksum": "20b02c1a3ee61f90b26cab5752c9ad10"
     }
   },
   "users": null

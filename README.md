@@ -57,7 +57,7 @@ The project is structured into two distinct computational modules:
 
 *   **Confidentiality**: Access to raw observational data is restricted to authorized environments.
 *   **Secret Management**: Sensitive configuration parameters are managed via environment variables.
-*   **Licensing**: The investigation framework is open-source under the [MIT License](LICENSE).
+*   **Licensing**: The investigation framework is open-source under [MIT License](LICENSE).
 
 ## Author
 
