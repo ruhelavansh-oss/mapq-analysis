@@ -14,7 +14,6 @@ format:
 
 -   **ORCID**: [0009-0004-1750-3592](https://orcid.org/0009-0004-1750-3592)
 -   **GitHub**: [ruhelavansh-oss](https://github.com/ruhelavansh-oss)
--   **Affiliation**: Centre for Criminology and Sociolegal Studies, University of Toronto
 
 # Contributor Statement
 
