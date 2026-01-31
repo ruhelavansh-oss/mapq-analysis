@@ -17,8 +17,8 @@ print(paste0("rsconnect::setAccountInfo(name='", account_name, "', token='<TOKEN
 tryCatch({
   rsconnect::deployApp(
     appDir = ".",
-    appName = "mapq-scientific-analysis",
-    appTitle = "MAPQ Scientific Analysis",
+    appName = "mapq-project",
+    appTitle = "MAPQ Project",
     account = account_name,
     server = "posit.cloud",
     forceUpdate = TRUE,
