@@ -14,6 +14,7 @@ format:
 
 -   **ORCID**: [0009-0004-1750-3592](https://orcid.org/0009-0004-1750-3592)
 -   **GitHub**: [ruhelavansh-oss](https://github.com/ruhelavansh-oss)
+-   **Role**: Principal Investigator
 
 # Contributor Statement
 
@@ -43,3 +44,8 @@ This website and analysis pipeline were built using a secure, reproducible stack
 # Contact
 
 For inquiries regarding the MAPQ data or this analysis, please contact the author via the GitHub repository linked above.
+
+# Related Projects
+
+-   [The OTIS Reports](https://vanshsinghruhela-the-otis-reports.share.connect.posit.cloud)
+-   [Statistical Report on Restrictive Confinement](https://vanshsinghruhela-stats-report-on-restrictive-confinement.share.connect.posit.cloud/notez1a.html)
