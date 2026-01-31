@@ -22,7 +22,7 @@ This section details the psychometric evaluation of the **Modified Attitudes on 
 
 # Setup and Data Loading
 
-```{r setup}
+```{r}
 #| label: setup-psych
 
 library(readxl)
@@ -55,7 +55,7 @@ print(paste("Dataset Dimensions:", dim_desc[1], "Observations,", dim_desc[2], "I
 
 # Moment Metrics
 
-```{r descriptives}
+```{r}
 #| label: descriptives
 
 describe(my.data)
@@ -65,7 +65,7 @@ describe(my.data)
 
 Internal consistency is assessed using **Cronbach's Alpha** and **McDonald's Omega**.
 
-```{r reliability}
+```{r}
 #| label: reliability
 
 # Scale Keys for the 4 Latent Constructs (LC)
@@ -96,7 +96,7 @@ print(omega_res)
 
 The relationship between the subscales provides insight into the structural coherence of the MAPQ.
 
-```{r correlations}
+```{r}
 #| label: pairs-plot
 #| fig.height: 10
 
@@ -114,7 +114,7 @@ pairs.panels(my.scores,
 
 To validate the robustness of the factor structure, a **Monte Carlo Simulation** is performed using `mvrnorm`. A dataset is simulated ($N=500$) preserving the original means and covariance structure, but rounded to the discrete Likert scale (1-5).
 
-```{r simulation}
+```{r}
 #| label: monte-carlo-sim
 
 set.seed(42499)
@@ -154,7 +154,7 @@ The EFA and CFA are replicated on the simulated dataset to confirm structural st
 
 Exploratory Factor Analysis is performed.
 
-```{r sim-efa}
+```{r}
 #| label: sim-efa-plot
 #| fig.height: 10
 
@@ -170,7 +170,7 @@ fa.diagram(efa_result)
 
 Confirmatory Factor Analysis defines the theoretical model where each latent construct (LC) loads onto its respective items.
 
-```{r sim-cfa}
+```{r}
 #| label: sim-cfa-model
 
 # Define Model using explicit variable names

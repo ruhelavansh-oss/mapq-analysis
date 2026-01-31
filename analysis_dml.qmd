@@ -28,7 +28,7 @@ We utilize `DoubleML`, `mlr3`, and custom simulation logic to ensure scientific 
 
 # Setup & Dependencies
 
-```{r setup}
+```{r}
 #| label: load-libs
 
 library(DoubleML)
@@ -60,7 +60,7 @@ To address the potential imbalance in the `gender` treatment variable, we implem
 
 ## Custom SMOTE Function
 
-```{r smote-func}
+```{r}
 #| label: custom-smote
 
 custom_smote <- function(data, target, k = 5) {
@@ -123,7 +123,7 @@ custom_smote <- function(data, target, k = 5) {
 
 ## Applying SMOTE to MAPQ Data
 
-```{r apply-smote}
+```{r}
 #| label: smote-application
 
 # Select columns
@@ -155,7 +155,7 @@ kable(as.data.frame(final_tab), col.names = c("Gender Group", "Count"), caption 
 
 We use the **Interactive Regression Model (IRM)** to estimate the Average Treatment Effect (ATE).
 
-```{r dml-setup}
+```{r}
 #| label: dml-setup
 
 # Prepare Data.Table
@@ -183,7 +183,7 @@ dml_irm <- DoubleMLIRM$new(dml_data,
 
 ## Estimation Results & Propensity Score Diagnostics
 
-```{r dml-fit-plot}
+```{r}
 #| label: dml-fit-plot
 #| fig.height: 8
 
@@ -207,7 +207,7 @@ ggplot(df_balanced, aes(x = ps_score, fill = factor(gender_bin))) +
 
 ## Average Treatment Effect on the Treated (ATT)
 
-```{r dml-att}
+```{r}
 #| label: dml-att
 
 dml_irm_att <- DoubleMLIRM$new(dml_data,
@@ -221,7 +221,7 @@ dml_irm_att$summary()
 
 # Instrumental Variable Analysis (LATE)
 
-```{r dml-late}
+```{r}
 #| label: dml-late
 
 # Synthetic Data for LATE
