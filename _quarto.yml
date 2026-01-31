@@ -67,12 +67,18 @@ website:
 
 format:
   html:
-    toc: true
-    code-fold: true
-    code-summary: "Show code"
-    anchor-sections: true
-    smooth-scroll: true
-    theme: cosmo
+    toc: true # Table of contents for each page
+    code-fold: true # Allow code to be folded
+    code-summary: "Show code" # Text for the code folding summary
+    anchor-sections: true # Enable clickable links for sections
+    smooth-scroll: true # Smooth scrolling for navigation
+    theme: 
+      dark:
+        - darkly
+        - brand
+      light: 
+        - cosmo
+        - brand
     css: styles.css
     fontsize: 1.1em
     fig-width: 10
