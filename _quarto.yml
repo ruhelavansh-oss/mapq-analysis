@@ -75,6 +75,7 @@ format:
     theme: 
       dark:
         - darkly
+        - brand
       light: 
         - cosmo
         - brand
