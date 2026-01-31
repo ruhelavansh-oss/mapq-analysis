@@ -25,7 +25,6 @@ website:
       - icon: github
         href: https://github.com/ruhelavansh-oss/mapq-analysis
   repo-url: https://github.com/ruhelavansh-oss/mapq-analysis
-  repo-actions: [edit, source, issue]
   page-navigation: true
   reader-mode: true
   
