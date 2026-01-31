@@ -94,7 +94,7 @@ omega_res <- omega(my.data, nfactors = 4, plot = TRUE)
 print(omega_res)
 ```
 
-# Construct Correlations (Visual)
+# Construct Correlations
 
 The relationship between the subscales provides insight into the structural coherence of the MAPQ.
 
