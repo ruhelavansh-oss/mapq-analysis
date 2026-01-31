@@ -8,7 +8,9 @@ format:
     df-print: kable
     toc: true
     number-sections: true
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
 execute:
   echo: true
   warning: false
@@ -24,7 +26,7 @@ This advanced analysis extends the standard Double Machine Learning (DML) framew
 
 We utilize `DoubleML`, `mlr3`, and custom simulation logic to ensure scientific rigor.
 
-# 1. Setup & Dependencies
+# Setup & Dependencies
 
 ```{r setup}
 #| label: load-libs
@@ -52,11 +54,11 @@ kable(head(data_raw, 5), caption = "Raw Data Preview") %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
 ```
 
-# 2. Advanced Preprocessing: SMOTE
+# Advanced Preprocessing: SMOTE
 
 To address the potential imbalance in the `gender` treatment variable, we implement a custom SMOTE algorithm to generate synthetic samples for the minority class.
 
-## 2.1 Custom SMOTE Function
+## Custom SMOTE Function
 
 ```{r smote-func}
 #| label: custom-smote
@@ -119,7 +121,7 @@ custom_smote <- function(data, target, k = 5) {
 }
 ```
 
-## 2.2 Applying SMOTE to MAPQ Data
+## Applying SMOTE to MAPQ Data
 
 ```{r apply-smote}
 #| label: smote-application
@@ -147,9 +149,9 @@ kable(as.data.frame(final_tab), col.names = c("Gender Group", "Count"), caption 
   kable_styling(full_width = F)
 ```
 
-# 3. Double Machine Learning Analysis
+# Double Machine Learning Analysis
 
-## 3.1 Model Configuration (IRM for ATE)
+## Model Configuration (IRM for ATE)
 
 We use the **Interactive Regression Model (IRM)** to estimate the Average Treatment Effect (ATE).
 
@@ -179,10 +181,11 @@ dml_irm <- DoubleMLIRM$new(dml_data,
                            score = "ATE")
 ```
 
-## 3.2 Estimation Results & Propensity Score Diagnostics
+## Estimation Results & Propensity Score Diagnostics
 
 ```{r dml-fit-plot}
 #| label: dml-fit-plot
+#| fig.height: 8
 
 dml_irm$fit()
 dml_irm$summary()
@@ -202,7 +205,7 @@ ggplot(df_balanced, aes(x = ps_score, fill = factor(gender_bin))) +
   theme_minimal()
 ```
 
-## 3.3 Average Treatment Effect on the Treated (ATTE)
+## Average Treatment Effect on the Treated (ATTE)
 
 ```{r dml-atte}
 #| label: dml-atte
@@ -216,7 +219,7 @@ dml_irm_atte$fit()
 dml_irm_atte$summary()
 ```
 
-# 4. Instrumental Variable Analysis (LATE)
+# Instrumental Variable Analysis (LATE)
 
 ```{r dml-late}
 #| label: dml-late

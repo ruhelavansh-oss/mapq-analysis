@@ -4290,28 +4290,28 @@
   },
   "files": {
     "_quarto.yml": {
-      "checksum": "76b4f35391adceebf5ad02d05695966c"
+      "checksum": "f45e26529af1756be746b0b8f1e53fe7"
     },
     "_site/about.html": {
       "checksum": "678c9b2831e5ad526915988599895485"
     },
     "_site/analysis_dml_files/figure-html/dml-fit-plot-1.png": {
-      "checksum": "ffc2fa09a0c825ebf83ad81ac46238d1"
+      "checksum": "a98f5d594f3a45dcd5cd1f6d24447298"
     },
     "_site/analysis_dml.html": {
-      "checksum": "9eb0107526bd0204744220b4126cbbe9"
+      "checksum": "6808ddd951cbe4136362e9e848c6e730"
     },
     "_site/analysis_psych_files/figure-html/pairs-plot-1.png": {
-      "checksum": "99d58c737161e43ae3940b879a1806a0"
+      "checksum": "1c7c5af15c102751c1b89ceb9d2326df"
     },
     "_site/analysis_psych_files/figure-html/reliability-1.png": {
-      "checksum": "83493d16859bb0758c7fac6a9bdbae22"
+      "checksum": "395c787b2a2a265ea9964952d2d93244"
     },
     "_site/analysis_psych_files/figure-html/sim-efa-plot-1.png": {
-      "checksum": "38d681e30fb412bcdbb52e4cf1f5d1ed"
+      "checksum": "c07416017906f0a96f7bf7414b5cf92f"
     },
     "_site/analysis_psych.html": {
-      "checksum": "2ac716cacd56f72359c6a97b9e308262"
+      "checksum": "f2d2bce7d61d55c49005196957a3b564"
     },
     "_site/index.html": {
       "checksum": "6e95532663dd1c5e3cb5fbe849a56b36"
@@ -4323,10 +4323,16 @@
       "checksum": "ace9d3a9c2c80164cf84700fff6adc8e"
     },
     "_site/search.json": {
-      "checksum": "280f06cd38997371b6a05d499b397a07"
+      "checksum": "a454e9fdb9f94bf797f22ff585bd4804"
     },
     "_site/site_libs/bootstrap/bootstrap-3d184695bb015ad6d4eccee7f8f70647.min.css": {
       "checksum": "3d184695bb015ad6d4eccee7f8f70647"
+    },
+    "_site/site_libs/bootstrap/bootstrap-c8bb928b46da909441baec508128ee0f.min.css": {
+      "checksum": "c8bb928b46da909441baec508128ee0f"
+    },
+    "_site/site_libs/bootstrap/bootstrap-dark-cbd85a6a7bf25c1ee1fc33ade7d7b84c.min.css": {
+      "checksum": "cbd85a6a7bf25c1ee1fc33ade7d7b84c"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "886da841d7421705f715f600c5ff11bb"
@@ -4363,6 +4369,9 @@
     },
     "_site/site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css": {
       "checksum": "587c61ba64f3a5504c4d52d930310e48"
+    },
+    "_site/site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css": {
+      "checksum": "b758ccaa5987ceb1b75504551e579abf"
     },
     "_site/site_libs/quarto-html/quarto.js": {
       "checksum": "a65a7780c10232b6515cdfb8beaaa221"
@@ -4401,13 +4410,13 @@
       "checksum": "26ea8434e3b45d72ede4ce5791eb0fea"
     },
     "about.qmd": {
-      "checksum": "c4060992b8460392bd3d47fec4828583"
+      "checksum": "f501ad35a3957083bd22caeeeb6ba559"
     },
     "analysis_dml.qmd": {
-      "checksum": "ba1662542858f167c81283a92247df9a"
+      "checksum": "d3d7c420d602b985dd8612bf79a4ae76"
     },
     "analysis_psych.qmd": {
-      "checksum": "dd95051aa0c2caf12a9baea4c106d70a"
+      "checksum": "881f5ee9899c0325893405fac3136c7e"
     },
     "data/MAPQ_TKARONTO-3.xlsx": {
       "checksum": "5200997fe1f9d79bf04990cc8a46576b"
@@ -4419,7 +4428,7 @@
       "checksum": "8d77012d7bd30b35338db43856b2e533"
     },
     "index.qmd": {
-      "checksum": "0ee15cbda0fd7da165915a953c9fb3db"
+      "checksum": "af01206d8233df575cca20692fa4f5e8"
     },
     "install_deps.R": {
       "checksum": "e8b56678d62967a9b2a5894f9b04f258"

@@ -7,8 +7,8 @@ project:
 
 website:
   navbar:
-    background: "#2C3E50"
-    foreground: "#FFFFFF"
+    background: primary
+    foreground: light
     left:
       - href: index.qmd
         text: "Home"
@@ -22,14 +22,33 @@ website:
       - icon: github
         href: https://github.com/ruhelavansh-oss
         aria-label: GitHub
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Analysis Modules"
+        contents:
+          - analysis_psych.qmd
+          - analysis_dml.qmd
+      - section: "Project Info"
+        contents:
+          - index.qmd
+          - about.qmd
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
     css: styles.css
     toc: true
     code-fold: true
     df-print: paged
+    fontsize: 1.1em
+    fig-width: 8
+    fig-height: 6
+    fig-responsive: true
 
 execute:
   echo: true

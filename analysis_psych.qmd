@@ -7,7 +7,9 @@ format:
     df-print: paged
     toc: true
     number-sections: true
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
 execute:
   echo: true
   warning: false
@@ -18,7 +20,7 @@ execute:
 
 This section details the psychometric evaluation of the **Modified Attitudes on Psychedelics Questionnaire (MAPQ)**. We employ classical test theory (CTT) and latent variable modeling to assess the instrument's reliability and construct validity.
 
-# 1. Setup and Data Loading
+# Setup and Data Loading
 
 ```{r setup}
 #| label: setup-psych
@@ -51,7 +53,7 @@ dim_desc <- dim(my.data)
 print(paste("Dataset Dimensions:", dim_desc[1], "Observations,", dim_desc[2], "Items"))
 ```
 
-# 2. Item Analysis
+# Item Analysis
 
 We inspect descriptive statistics to ensure data quality.
 
@@ -61,7 +63,7 @@ We inspect descriptive statistics to ensure data quality.
 describe(my.data)
 ```
 
-# 3. Reliability Analysis
+# Reliability Analysis
 
 We assess internal consistency using **Cronbach's Alpha** and **McDonald's Omega**.
 
@@ -70,8 +72,9 @@ We assess internal consistency using **Cronbach's Alpha** and **McDonald's Omega
 
 # Scale Keys for the 4 Latent Constructs (LC)
 # LC1: Items 1-5 (EE), LC2: Items 6-10 (EA), LC3: Items 11-15 (UA), LC4: Items 16-20 (ER)
-# Matches mapqii.Rmd indexing
+# Matches mapqii.Rmd indexing exactly (including S1)
 my.keys <- make.keys(my.data, list(
+  S1 = c(1:20),
   LC1 = c(1,2,3,4,5),
   LC2 = c(6,7,8,9,10),
   LC3 = c(11,12,13,14,15),
@@ -87,19 +90,17 @@ scales.ov <- scoreOverlap(my.keys, my.data)
 print(scales.ov, short=FALSE)
 
 # McDonald's Omega (Real Data)
-# Note: mapqii.Rmd runs this on 'small.msq' which is a subset of my.data columns.
-# Since my.data ONLY has the 20 items, small.msq == my.data
 omega_res <- omega(my.data, nfactors = 4, plot = TRUE)
 print(omega_res)
 ```
 
-# 4. Construct Correlations (Visual)
+# Construct Correlations (Visual)
 
 The relationship between the subscales provides insight into the structural coherence of the MAPQ.
 
 ```{r correlations}
 #| label: pairs-plot
-#| fig.height: 8
+#| fig.height: 10
 
 my.scores <- my.scales$scores
 pairs.panels(my.scores, 
@@ -111,7 +112,7 @@ pairs.panels(my.scores,
              main = "Correlations Between MAPQ Subscales")
 ```
 
-# 5. Monte Carlo Simulation
+# Monte Carlo Simulation
 
 To validate the robustness of the factor structure, we perform a **Monte Carlo Simulation** using `mvrnorm`. We simulate a dataset ($N=500$) preserving the original means and covariance structure, but rounded to the discrete Likert scale (1-5).
 
@@ -143,18 +144,19 @@ sim1 <- as.data.frame(sim1)
 colnames(sim1) <- colnames(my.data)
 
 summary(sim1)
+# Important: Mapqii uses data2 <- sim1 for subsequent analysis
 data2 <- sim1
 ```
 
-# 6. Factor Analysis on Simulated Data
+# Factor Analysis on Simulated Data
 
 We replicate the EFA and CFA on the simulated dataset to confirm structural stability.
 
-## 6.1 Exploratory Factor Analysis (EFA)
+## Exploratory Factor Analysis (EFA)
 
 ```{r sim-efa}
 #| label: sim-efa-plot
-#| fig.height: 8
+#| fig.height: 10
 
 # EFA with 4 factors
 efa_result <- fa(data2, nfactors = 4, rotate = "oblimin", fm = "minres")
@@ -164,7 +166,7 @@ print(efa_result)
 fa.diagram(efa_result)
 ```
 
-## 6.2 Confirmatory Factor Analysis (CFA)
+## Confirmatory Factor Analysis (CFA)
 
 We define the theoretical model where each latent construct (LC) loads onto its respective items.
 
@@ -172,7 +174,7 @@ We define the theoretical model where each latent construct (LC) loads onto its 
 #| label: sim-cfa-model
 
 # Define Model using explicit variable names
-# Assuming columns are EE1..EE5, EA1..EA5 etc.
+# Assuming columns are EE1..EE5, EA1..EA5 etc. from the dataset
 cfa_model <- '
   LC1 =~ EE1 + EE2 + EE3 + EE4 + EE5
   LC2 =~ EA1 + EA2 + EA3 + EA4 + EA5

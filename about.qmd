@@ -1,8 +1,13 @@
 ---
 title: "About"
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
 ---
 
-## Author Information
+# Author Information
 
 **Vansh Singh Ruhela**  
 *Researcher & Project Lead*
@@ -11,21 +16,21 @@ title: "About"
 *   **GitHub**: [ruhelavansh-oss](https://github.com/ruhelavansh-oss)
 *   **Affiliation**: Independent Researcher
 
-## Contributor Statement
+# Contributor Statement
 
 This project, including the conceptualization, data analysis, and technical implementation of the Modified APQ (MAPQ) pipeline, was **solely contributed** by Vansh Singh Ruhela.
 
-## About the MAPQ
+# About the MAPQ
 
 The **Modified Attitudes on Psychedelics Questionnaire (MAPQ)** is a psychometric instrument adapted from the original **APQ** developed by **Dr. Zuljevi** in Croatia.
 
-### Adaptation Context
+## Adaptation Context
 This version of the questionnaire was specifically adapted and validated for a cohort of **Canadian residents**. The modifications account for:
 *   Regional cultural nuances regarding psychedelic substances.
 *   The specific regulatory environment in Canada (e.g., medical access programs).
 *   Linguistic norms of the target population.
 
-## Technical Implementation
+# Technical Implementation
 
 This website and analysis pipeline were built using a secure, reproducible stack:
 
@@ -34,6 +39,6 @@ This website and analysis pipeline were built using a secure, reproducible stack
 *   **Posit Connect**: For secure deployment and hosting.
 *   **DevSecOps**: Utilization of environment variables and encrypted secrets for data safety.
 
-## Contact
+# Contact
 
 For inquiries regarding the MAPQ data or this analysis, please contact the author via the GitHub repository linked above.

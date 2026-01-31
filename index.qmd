@@ -12,6 +12,10 @@ format:
     code-fold: true
     self-contained: true
     toc: true
+    number-sections: true
+    theme:
+      light: cosmo
+      dark: darkly
 ---
 
 # Introduction
@@ -23,7 +27,7 @@ The **Modified Attitudes on Psychedelics Questionnaire (MAPQ)** is a psychometri
 This scientific project encompasses two primary analytical pillars:
 
 1.  **Psychometric Validation**: Rigorous assessment of the MAPQ's internal structure using Exploratory Factor Analysis (EFA), Confirmatory Factor Analysis (CFA), and McDonald's Omega reliability estimates.
-2.  **Causal Inference**: Application of **Double Machine Learning (DML)** to estimate causal effects within the dataset, specifically investigating the impact of demographic factors (e.g., Gender) on Knowledge Sharing (KS) behaviors, controlling for high-dimensional confounders.
+2.  **Causal Inference**: Application of **Double Machine Learning (DML)** to estimate causal effects within the dataset, specifically investigating the impact of demographic factors (e.g., Gender) on Knowledge Sharing (KS) behaviors, controlling for high-dimensional confounding.
 
 ## Security & Reproducibility
 
