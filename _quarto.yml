@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+  title: "MAPQ Scientific Analysis"
+  render:
+    - "*.qmd"
+
+website:
+  navbar:
+    background: "#2C3E50"
+    foreground: "#FFFFFF"
+    left:
+      - href: index.qmd
+        text: "Home"
+      - href: analysis_psych.qmd
+        text: "Psychometrics"
+      - href: analysis_dml.qmd
+        text: "Causal Inference (DML)"
+      - href: about.qmd
+        text: "About"
+    right:
+      - icon: github
+        href: https://github.com/ruhelavansh-oss
+        aria-label: GitHub
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    code-fold: true
+    df-print: paged
+
+execute:
+  echo: true
+  warning: false
+  message: false
+
+editor: source

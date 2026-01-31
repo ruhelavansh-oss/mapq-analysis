@@ -1,0 +1,124 @@
+---
+title: "Causal Inference (DML)"
+subtitle: "Double Machine Learning Analysis of Gender and Knowledge Sharing"
+author: "Vansh Singh Ruhela"
+format:
+  html:
+    code-fold: true
+    df-print: paged
+---
+
+# Introduction
+
+This section employs **Double Machine Learning (DML)**, a rigorous causal inference framework that leverages machine learning to control for high-dimensional confounding. We investigate the causal effect of **Gender** on **Knowledge Sharing (KS)** behaviors, adjusting for personality traits (MAPQ subscales) and demographic factors.
+
+## Methodology
+
+We utilize the **Interactive Regression Model (IRM)** from the `DoubleML` package. This approach estimates the **Average Treatment Effect (ATE)** by:
+1.  Learning the relationship between confounders ($X$) and the outcome ($Y$): $g(X) = E[Y|X, D]$
+2.  Learning the relationship between confounders ($X$) and the treatment ($D$): $m(X) = E[D|X]$ (Propensity Score)
+3.  Combining these utilizing a Neyman-orthogonal score function to produce an unbiased estimate of the treatment effect.
+
+## 1. Setup and Data Preparation
+
+```{r setup, message=FALSE, warning=FALSE}
+library(readxl)
+library(DoubleML)
+library(mlr3)
+library(mlr3learners)
+library(data.table)
+library(ggplot2)
+library(dotenv)
+
+# Secure environment loading
+try(load_dot_env(), silent = TRUE)
+
+# Load Data
+data_path <- "data/MAPQ_TKARONTO-3.xlsx"
+raw_data <- read_excel(data_path, sheet = "MAPQ + KS + KnAcqS")
+
+# preprocessing
+# Select relevant columns for causal analysis
+# Outcome: KS
+# Treatment: gender (Binarized: 1 vs 2)
+# Confounders: age, education, workspace, EE, EA, UA, ER
+cols <- c("KS", "gender", "age", "education", "workspace", "EE", "EA", "UA", "ER")
+df_causal <- na.omit(raw_data[, cols])
+
+# Binarize Treatment for Analysis
+# Mapping: Group 2 vs Group 1 (Reference)
+df_causal$gender_bin <- ifelse(df_causal$gender == 2, 1, 0)
+
+# Convert to data.table for DoubleML
+dml_dt <- as.data.table(df_causal)
+dml_dt[, gender := NULL] # Remove original categorical column
+
+# Ensure numeric types
+cols_numeric <- c("age", "education", "workspace", "EE", "EA", "UA", "ER")
+dml_dt[, (cols_numeric) := lapply(.SD, as.numeric), .SDcols = cols_numeric]
+
+print(paste("Analysis Sample Size:", nrow(dml_dt)))
+```
+
+## 2. Double Machine Learning Configuration
+
+We employ **Random Forests** (`regr.ranger` and `classif.ranger`) as the nuisance learners. Random forests are non-parametric and effective at capturing complex, non-linear interactions between confounders.
+
+```{r dml-config}
+# 1. Initialize Data Object
+dml_data <- DoubleMLData$new(dml_dt,
+                             y_col = "KS",
+                             d_cols = "gender_bin",
+                             x_cols = cols_numeric)
+
+# 2. Define Learners
+# Regression learner for Outcome (Y)
+learner_g <- lrn("regr.ranger", num.trees = 500, max.depth = 5, min.node.size = 2)
+
+# Classification learner for Treatment (D) - Propensity Score
+learner_m <- lrn("classif.ranger", num.trees = 500, max.depth = 5, min.node.size = 2)
+
+# 3. Initialize Model (IRM)
+set.seed(123)
+dml_irm <- DoubleMLIRM$new(dml_data,
+                           ml_g = learner_g,
+                           ml_m = learner_m,
+                           n_folds = 3) # 3-fold cross-fitting
+```
+
+## 3. Estimation and Results
+
+```{r estimation}
+# Fit the model
+dml_irm$fit()
+
+# Retrieve Summary
+dml_irm$summary()
+```
+
+The coefficient displayed above represents the **Average Treatment Effect (ATE)** of Gender (Group 2 relative to Group 1) on Knowledge Sharing scores, after rigorously controlling for age, education, workspace environment, and the MAPQ personality traits.
+
+## 4. Diagnostics: Propensity Score Overlap
+
+A key assumption for causal inference is **positivity** (overlap). We visualize the estimated propensity scores to ensure that units in both treatment groups had a non-zero probability of receiving the treatment.
+
+```{r diagnostics}
+# We manually estimate propensity scores for visualization purposes
+# (DoubleML handles this internally, but we visualize to check assumptions)
+ps_model <- glm(gender_bin ~ ., data = dml_dt[, .SD, .SDcols = c("gender_bin", cols_numeric)], family = binomial)
+dml_dt$ps_score <- predict(ps_model, type = "response")
+
+ggplot(dml_dt, aes(x = ps_score, fill = factor(gender_bin))) +
+  geom_density(alpha = 0.5) +
+  scale_fill_manual(values = c("#3498db", "#e74c3c"), labels = c("Group 1", "Group 2")) +
+  labs(title = "Propensity Score Overlap",
+       subtitle = "Checking the Positivity Assumption",
+       x = "Estimated Propensity Score",
+       y = "Density",
+       fill = "Gender Group") +
+  theme_minimal()
+```
+
+# Conclusion
+
+The Double Machine Learning analysis provides a robust estimate of the causal effect. By using machine learning to orthogonalize the treatment and outcome with respect to the confounders, we reduce regularization bias and obtain valid confidence intervals for the effect of Gender on Knowledge Sharing.

@@ -1,0 +1,16 @@
+Package: mapqAnalysis
+Type: Project
+Title: MAPQ Scientific Analysis
+Version: 1.0.0
+Author: Vansh Singh Ruhela [aut, cre] <ruhela.vansh@gmail.com>
+Maintainer: Vansh Singh Ruhela <ruhela.vansh@gmail.com>
+Description: A scientific analysis of the Modified Attitudes on Psychedelics Questionnaire (MAPQ) using Quarto and Double Machine Learning.
+URL: https://github.com/ruhelavansh-oss/mapq-analysis
+Encoding: UTF-8
+Imports:
+    quarto,
+    psych,
+    DoubleML,
+    mlr3,
+    dotenv,
+    rsconnect

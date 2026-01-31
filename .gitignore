@@ -1,0 +1,16 @@
+# Security
+.env
+.DS_Store
+
+# R/Quarto
+.Rproj.user
+.Rhistory
+.RData
+/.quarto/
+/_site/
+.ipynb_checkpoints/
+rsconnect/
+manifest.json
+
+**/*.quarto_ipynb
+R_libs/

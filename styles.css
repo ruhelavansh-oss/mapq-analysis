@@ -1,0 +1,36 @@
+/* Scientific Typography */
+body {
+    font-family: 'Georgia', serif; /* Classic scientific journal feel */
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.scientific-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.scientific-table th, .scientific-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.scientific-table th {
+    background-color: #f2f2f2;
+}
