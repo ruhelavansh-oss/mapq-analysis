@@ -72,9 +72,7 @@ format:
     code-summary: "Show code"
     anchor-sections: true
     smooth-scroll: true
-    theme:
-      light: cosmo
-      dark: darkly
+    theme: cosmo
     css: styles.css
     fontsize: 1.1em
     fig-width: 10
