@@ -5,46 +5,76 @@ project:
   render:
     - "*.qmd"
 
+author:
+  - name: Vansh Singh Ruhela
+    corresponding: true
+    orcid: 0009-0004-1750-3592
+    email: vansh.ruhela@mail.utoronto.ca
+    affiliations:
+      - name: Centre for Criminology and Sociolegal Studies, School of Graduate Studies, University of Toronto St. George
+        address: Second Floor, Canadiana Gallery, 14 Queen’s Park Crescent West
+        city: Toronto
+        state: ON
+        postal-code: M5S 3K9
+
 website:
-  navbar:
-    background: primary
-    foreground: light
-    left:
-      - href: index.qmd
-        text: "Home"
-      - href: analysis_psych.qmd
-        text: "Psychometrics"
-      - href: analysis_dml.qmd
-        text: "Causal Inference (DML)"
-      - href: about.qmd
-        text: "About"
-    right:
+  title: "MAPQ Scientific Analysis"
+  page-footer: 
+    left: "Copyright 2026, Vansh Singh Ruhela" 
+    right: 
       - icon: github
-        href: https://github.com/ruhelavansh-oss
-        aria-label: GitHub
+        href: https://github.com/ruhelavansh-oss/mapq-analysis
+  repo-url: https://github.com/ruhelavansh-oss/mapq-analysis
+  repo-actions: [edit, source, issue]
+  page-navigation: true
+  reader-mode: true
+  
   sidebar:
     style: "docked"
     search: true
     collapse-level: 1
     contents:
-      - section: "Analysis Modules"
-        contents:
-          - analysis_psych.qmd
-          - analysis_dml.qmd
       - section: "Project Info"
         contents:
-          - index.qmd
-          - about.qmd
+          - href: index.qmd
+            text: "Home"
+          - href: about.qmd
+            text: "About"
+      - section: "Analysis Modules"
+        contents:
+          - href: analysis_psych.qmd
+            text: "Psychometrics Validation"
+          - href: analysis_dml.qmd
+            text: "Causal Inference (DML)"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Analysis
+        menu:
+          - text: Psychometrics
+            href: analysis_psych.qmd
+          - text: Causal Inference (DML)
+            href: analysis_dml.qmd
+      - text: About
+        menu:
+          - text: Author
+            href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/ruhelavansh-oss/mapq-analysis
 
 format:
   html:
+    toc: true
+    code-fold: true
+    code-summary: "Show code"
+    anchor-sections: true
+    smooth-scroll: true
     theme:
       light: cosmo
       dark: darkly
-    css: styles.css
-    toc: true
-    code-fold: true
-    df-print: paged
     fontsize: 1.1em
     fig-width: 8
     fig-height: 6

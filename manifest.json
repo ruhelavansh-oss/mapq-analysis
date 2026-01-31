@@ -4290,49 +4290,19 @@
   },
   "files": {
     "_quarto.yml": {
-      "checksum": "f45e26529af1756be746b0b8f1e53fe7"
-    },
-    "_site/about.html": {
-      "checksum": "678c9b2831e5ad526915988599895485"
-    },
-    "_site/analysis_dml_files/figure-html/dml-fit-plot-1.png": {
-      "checksum": "a98f5d594f3a45dcd5cd1f6d24447298"
-    },
-    "_site/analysis_dml.html": {
-      "checksum": "6808ddd951cbe4136362e9e848c6e730"
-    },
-    "_site/analysis_psych_files/figure-html/pairs-plot-1.png": {
-      "checksum": "1c7c5af15c102751c1b89ceb9d2326df"
-    },
-    "_site/analysis_psych_files/figure-html/reliability-1.png": {
-      "checksum": "395c787b2a2a265ea9964952d2d93244"
-    },
-    "_site/analysis_psych_files/figure-html/sim-efa-plot-1.png": {
-      "checksum": "c07416017906f0a96f7bf7414b5cf92f"
-    },
-    "_site/analysis_psych.html": {
-      "checksum": "f2d2bce7d61d55c49005196957a3b564"
-    },
-    "_site/index.html": {
-      "checksum": "6e95532663dd1c5e3cb5fbe849a56b36"
+      "checksum": "8255259557d0987d7a841ad202ed8fa1"
     },
     "_site/R_libs/quarto/doc/advanced-vignettes.html": {
-      "checksum": "6909ae18b67ce46f38993759fe9c1535"
+      "checksum": "db0a866ff9f82a18067c92aeabe8a309"
     },
     "_site/R_libs/quarto/doc/dynamic-metadata.html": {
-      "checksum": "ace9d3a9c2c80164cf84700fff6adc8e"
+      "checksum": "06e57a9b08eabe8e4871b548ce514a9c"
     },
-    "_site/search.json": {
-      "checksum": "a454e9fdb9f94bf797f22ff585bd4804"
+    "_site/site_libs/bootstrap/bootstrap-4c6940bfffdaf28543fbece7205d6e15.min.css": {
+      "checksum": "4c6940bfffdaf28543fbece7205d6e15"
     },
-    "_site/site_libs/bootstrap/bootstrap-3d184695bb015ad6d4eccee7f8f70647.min.css": {
-      "checksum": "3d184695bb015ad6d4eccee7f8f70647"
-    },
-    "_site/site_libs/bootstrap/bootstrap-c8bb928b46da909441baec508128ee0f.min.css": {
-      "checksum": "c8bb928b46da909441baec508128ee0f"
-    },
-    "_site/site_libs/bootstrap/bootstrap-dark-cbd85a6a7bf25c1ee1fc33ade7d7b84c.min.css": {
-      "checksum": "cbd85a6a7bf25c1ee1fc33ade7d7b84c"
+    "_site/site_libs/bootstrap/bootstrap-dark-70ffc6ed3f2a4d75d9c6a4d6a753f3cf.min.css": {
+      "checksum": "70ffc6ed3f2a4d75d9c6a4d6a753f3cf"
     },
     "_site/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "886da841d7421705f715f600c5ff11bb"
@@ -4345,18 +4315,6 @@
     },
     "_site/site_libs/clipboard/clipboard.min.js": {
       "checksum": "15f52a1ee547f2bdd46e56747332ca2d"
-    },
-    "_site/site_libs/kePrint-0.0.1/kePrint.js": {
-      "checksum": "03b791fcaee0a40c261c3c14f3d85d27"
-    },
-    "_site/site_libs/lightable-0.0.1/lightable.css": {
-      "checksum": "25547ce4d44910ea8f377212d34397fa"
-    },
-    "_site/site_libs/pagedtable-1.1/css/pagedtable.css": {
-      "checksum": "7773d8ddc5fe6c5adbde2349b933127f"
-    },
-    "_site/site_libs/pagedtable-1.1/js/pagedtable.js": {
-      "checksum": "8b657fbd2add193c16394a3f8339d3cf"
     },
     "_site/site_libs/quarto-html/anchor.min.js": {
       "checksum": "91bcf6cd1fd88fec3f109811e5fc3546"
@@ -4385,6 +4343,9 @@
     "_site/site_libs/quarto-html/tippy.umd.min.js": {
       "checksum": "d828775275749701b48bd9d958814111"
     },
+    "_site/site_libs/quarto-html/zenscroll-min.js": {
+      "checksum": "717c95813ddfc3d41e98c26642fc1372"
+    },
     "_site/site_libs/quarto-nav/headroom.min.js": {
       "checksum": "ace0360e576db9b6e7df48ac68ddbbf4"
     },
@@ -4399,9 +4360,6 @@
     },
     "_site/site_libs/quarto-search/quarto-search.js": {
       "checksum": "bb16b7e73be13eba97c99d25b2a476b3"
-    },
-    "_site/styles.css": {
-      "checksum": "78b3d28d7097f771af7b137e0756a7a9"
     },
     ".env": {
       "checksum": "38f4c7558b97a5cc36f931d172b1fcd3"
@@ -6873,13 +6831,13 @@
       "checksum": "19ad5f4d657518541f111e6fecf7e9b9"
     },
     "R_libs/quarto/doc/hello-pdf.log": {
-      "checksum": "f3f6306e13ebc80f289b2473d5bbcd4b"
+      "checksum": "d1008105efa77d7157580ea434497db7"
     },
     "R_libs/quarto/doc/hello-pdf.qmd": {
       "checksum": "8435e015ab8e9e5eae0d97b48ee03d7b"
     },
     "R_libs/quarto/doc/hello-pdf.tex": {
-      "checksum": "59c6cce3c81f8ae304fb4a01978c6da2"
+      "checksum": "521652d81666a0754f314f4ec239db1f"
     },
     "R_libs/quarto/doc/hello.html": {
       "checksum": "3efc1e2d59c36e5ec95651227dc45214"
