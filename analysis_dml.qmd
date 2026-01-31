@@ -1,6 +1,6 @@
 ---
 title: "Advanced Causal Inference (DML)"
-subtitle: "Double Machine Learning: ATE, LATE, & SMOTE Analysis"
+subtitle: "Double Machine Learning: ATE, LATE, & SMOTE"
 author: "Vansh Singh Ruhela"
 format:
   html:
