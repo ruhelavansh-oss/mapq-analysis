@@ -1,28 +1,28 @@
 # MAPQ Experimental Project
 
-This repository contains the source code, data processing pipelines, and analytical reports for the Modified Attitudes on Psychedelics Questionnaire (MAPQ) project. The study focuses on the psychometric validation of the instrument and the application of causal inference methods to observational behavioral data.
+This repository contains the source code, data processing pipelines, and analytical reports for the Modified Attitudes on Psychedelics Questionnaire (MAPQ) project. The study focuses on the psychometric investigation of the instrument and the application of causal inference frameworks to observational behavioral data.
 
 ## Project Overview
 
 The MAPQ project is a scientific initiative designed to evaluate a psychometric instrument within the Canadian demographic context. It utilizes advanced statistical frameworks to ensure the reliability of the measurement and explores the causal impact of demographic variables on knowledge-sharing behaviors.
 
 ### Primary Objectives
-1.  **Psychometric Validation**: Verification of the 4-factor structure through Exploratory Factor Analysis (EFA), Confirmatory Factor Analysis (CFA), and Monte Carlo simulations.
-2.  **Causal Inference**: Estimation of Average Treatment Effects (ATE) and Local Average Treatment Effects (LATE) using Double Machine Learning (DML) architectures.
+1.  **Psychometric Investigation**: Verification of the 4-factor structure through EFA, CFA, and Monte Carlo simulations.
+2.  **Causal Inference**: Estimation of Average Treatment Effects (ATE), ATT, and LATE using Double Machine Learning (DML) architectures.
 3.  **Scientific Reproducibility**: Implementation of a version-controlled, containerized workflow to ensure all results are verifiable and transparent.
 
 ## Analysis Modules
 
 The project is structured into two distinct computational modules:
 
-### 1. Psychological Metrics (analysis_psych.qmd)
+### 1. PSY: Psychological Metrics (`analysis_psych.qmd`)
 *   **Reliability Assessment**: Calculation of Cronbach's Alpha and McDonald's Omega coefficients.
 *   **Structural Modeling**: Execution of EFA and CFA on observed and synthetic datasets.
-*   **Robustness Testing**: Implementation of Monte Carlo simulations to validate factor stability across generated distributions.
+*   **Robustness Testing**: Implementation of Monte Carlo simulations to validate factor stability.
 
-### 2. Causal Machine Learning (analysis_dml.qmd)
+### 2. DML: Causal Machine Learning (`analysis_dml.qmd`)
 *   **Estimation Framework**: Utilization of the Interactive Regression Model (IRM) within the DoubleML framework.
-*   **Class Balancing**: Application of the Synthetic Minority Over-sampling Technique (SMOTE) to mitigate demographic group imbalance.
+*   **Class Balancing**: Application of the Synthetic Minority Over-sampling Technique (SMOTE).
 *   **Instrumental Variables**: Simulation-based LATE estimation to address potential unobserved confounding.
 
 ## Technical Stack
@@ -34,38 +34,36 @@ The project is structured into two distinct computational modules:
     *   `psych`, `psychTools`: Psychometric analytics
     *   `DoubleML`, `mlr3`: Causal inference and machine learning
     *   `lavaan`: Structural equation modeling
-    *   `knitr`, `kableExtra`: Scientific reporting and table generation
+    *   `knitr`, `kableExtra`: Scientific reporting and tabularization
 
 ## Repository Structure
 
 ```
-mapq-analysis/
-├── _quarto.yml          # Global configuration and navigation
-├── index.qmd            # Project Introduction and Scope
-├── about.qmd            # Author metadata and study context
-├── analysis_psych.qmd   # Psychometric analysis implementation
-├── analysis_dml.qmd     # Causal machine learning implementation
-├── data/                # Observational datasets
-├── styles.css           # Scientific formatting and visual styles
-├── README.md            # Project documentation
-└── LICENSE              # MIT License documentation
+/
+├── _quarto.yml          # Project-wide configuration and navigation
+├── index.qmd            # Home: Introduction, Scope, and Security
+├── about.qmd            # About: Author profile and study context
+├── analysis_psych.qmd   # Module: Psychological Metrics (PSY)
+├── analysis_dml.qmd     # Module: Causal Machine Learning (DML)
+├── styles.css           # Custom scientific CSS styles
+├── README.md            # Repository documentation
+├── LICENSE              # MIT License terms
+├── data/                # Secure observational data (excluded from git)
+│   └── ...
+└── R_libs/              # Reproducible R dependency environment
 ```
 
-## Security and Data Integrity
+## Security & Reproducibility
 
 *   **Confidentiality**: Access to raw observational data is restricted to authorized environments.
-*   **Secret Management**: Sensitive configuration parameters and API credentials are managed via environment variables and are excluded from version control.
+*   **Secret Management**: Sensitive configuration parameters are managed via environment variables.
+*   **Licensing**: The investigation framework is open-source under the [MIT License](LICENSE).
 
 ## Author
 
 **Vansh Singh Ruhela**  
 Centre for Criminology and Sociolegal Studies, University of Toronto  
-Centre for Criminology and Sociolegal Studies, University of Toronto  
 [GitHub](https://github.com/ruhelavansh-oss) | [ORCID](https://orcid.org/0009-0004-1750-3592)
-
-## License
-
-This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for the full text.
 
 ---
 *Copyright © 2026 Vansh Singh Ruhela. All rights reserved.*
